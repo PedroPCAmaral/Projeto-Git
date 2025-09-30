@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background:  no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #00ffcc;
+}
+
+header h1 {
+  font-size: 2.2em;
+  color: #00ffcc;
+  text-shadow: 2px 2px 5px #000;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+
+/* Seções */
+main section {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Sobre mim */
+.sobre img.perfil {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  border: 3px solid #00ffcc;
+}
+
+/* Habilidades */
+.habilidades ul {
+  list-style: none;
+}
+
+.habilidades li {
+  padding: 8px;
+  margin: 5px 0;
+  background: rgba(0, 255, 204, 0.2);
+  border-left: 5px solid #00ffcc;
+  border-radius: 8px;
+}
+
+/* Projetos */
+.projetos table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  table-layout: auto;
+}
+
+.projetos th, .projetos td {
+  border: 1px solid #00ffcc;
+  padding: 10px;
+  text-align: center;
+}
+
+.projetos th {
+  background: rgba(0, 255, 204, 0.3);
+  color: #00ffcc;
+}
+
+/* Contato */
+.contato button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato button:hover {
+  background: #00bfa5;
+  color: #fff;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/*  RESPONSIVIDADE */
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  main section {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .sobre img.perfil {
+    width: 150px;
+  }
+
+  .projetos table,
+  .projetos thead,
+  .projetos tbody,
+  .projetos th,
+  .projetos td,
+  .projetos tr {
+    display: block;
+    width: 100%;
+  }
+
+  .projetos tr {
+    margin-bottom: 15px;
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    padding: 10px;
+    background: rgba(0, 255, 204, 0.1);
+  }
+
+  .projetos th {
+    display: none; /* esconde cabeçalho em telas pequenas */
+  }
+
+  .projetos td {
+    text-align: left;
+    border: none;
+    position: relative;
+    padding-left: 40%;
+  }
+
+  .projetos td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #00ffcc;
+  }
+}
+
+/* Ajustes para celulares muito pequenos */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .sobre img.perfil {
+    width: 120px;
+  }
+
+  .contato button {
+    width: 100%;
+    padding: 12px;
+  }
+}
