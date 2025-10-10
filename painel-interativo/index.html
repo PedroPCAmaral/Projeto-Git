@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Painel de Emoções</title>
+<style>
+body { 
+  font-family: Arial; 
+  text-align: center; 
+  background-color: #f0f0f0; 
+}
+#painel { 
+  margin: 50px auto; 
+  padding: 40px; 
+  background-color: white; 
+  width: 300px; 
+  border-radius: 15px; 
+  box-shadow: 0 0 10px gray; 
+  transition: background-color 0.3s;
+}
+button { 
+  margin: 10px; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+}
+#emoji { 
+  font-size: 50px; 
+  margin-top: 20px; 
+}
+</style>
+</head>
+<body>
+<div id="painel">
+  <h2>Como você está hoje?</h2>
+  <div id="emoji">🙂</div>
+  <div>
+    <button id="feliz">Feliz</button>
+    <button id="triste">Triste</button>
+    <button id="bravo">Bravo</button>
+    <button id="surpreso">Surpreso</button>
+  </div>
+</div>
+
+<script>
+  const painel = document.getElementById("painel");
+  const emoji = document.getElementById("emoji");
+
+  document.getElementById("feliz").onclick = function() {
+    emoji.textContent = "😄";
+    painel.style.backgroundColor = "yellow";
+  };
+
+  document.getElementById("triste").onclick = function() {
+    emoji.textContent = "😢";
+    painel.style.backgroundColor = "lightblue";
+  };
+
+  document.getElementById("bravo").onclick = function() {
+    emoji.textContent = "😡";
+    painel.style.backgroundColor = "red";
+  };
+
+  document.getElementById("surpreso").onclick = function() {
+    emoji.textContent = "😲";
+    painel.style.backgroundColor = "purple";
+  };
+</script>
+</body>
+</html>
