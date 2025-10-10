@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<title>Mostrador de Teclas</title>
+
+<style>
+#saida {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 100px;
+  transition: color 0.3s;
+}
+</style>
+</head>
+<body>
+  <h2>Pressione qualquer tecla</h2>
+  <div id="saida">Aguardando tecla...</div>
+
+  <script>
+    const saida = document.getElementById("saida");
+
+    document.addEventListener("keydown", function(event) {
+      saida.textContent = `Você pressionou: ${event.key}`;
+      saida.style.color = "blue";
+    });
+  </script>
+</body>
+</html>
