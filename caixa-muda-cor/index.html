@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<title>Caixa Mágica</title>
+
+<style>
+#caixa {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 200px;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.5s, color 0.5s;
+}
+</style>
+</head>
+<body>
+  <div id="caixa">Passe o mouse</div>
+
+  <script>
+    const caixa = document.querySelector("#caixa");
+
+    caixa.addEventListener("mouseenter", function() {
+      caixa.style.backgroundColor = "purple";
+      caixa.textContent = "A mágica aconteceu!";
+    });
+
+    caixa.addEventListener("mouseleave", function() {
+      caixa.style.backgroundColor = "gray";
+      caixa.textContent = "Passe o mouse";
+    });
+  </script>
+</body>
+</html>
+
