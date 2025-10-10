@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<title>Mensagens Coloridas</title>
+
+<style>
+
+.mensagem {
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+</style>
+</head>
+<body>
+  <div class="mensagem">Mensagem 1</div>
+  <div class="mensagem">Mensagem 2</div>
+  <div class="mensagem">Mensagem 3</div>
+
+  <script>
+    
+    const mensagens = document.querySelectorAll(".mensagem");
+
+    
+    mensagens.forEach(function(msg) {
+      msg.addEventListener("mouseover", function() {
+        msg.style.backgroundColor = "skyblue";
+      });
+
+      msg.addEventListener("mouseout", function() {
+        msg.style.backgroundColor = "lightgray";
+      });
+    });
+  </script>
+</body>
+</html>
+
+ 
