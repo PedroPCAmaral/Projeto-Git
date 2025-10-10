@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Mágico Gamer de Cores</title>
+
+</head>
+<body>
+  <h2>Pressione R, G ou B para mudar a cor do fundo!</h2>
+
+  <script>
+    document.addEventListener("keydown", function(event) {
+      const tecla = event.key.toLowerCase(); // maiúscula ou minúscula
+
+      if (tecla === "r") {
+        document.body.style.backgroundColor = "red";
+      } else if (tecla === "g") {
+        document.body.style.backgroundColor = "green";
+      } else if (tecla === "b") {
+        document.body.style.backgroundColor = "blue";
+      }
+    });
+  </script>
+</body>
+</html>
+
