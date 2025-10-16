@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cotação de Moedas</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+background: linear-gradient(135deg, #141e30, #243b55);
+color: white;
+padding: 40px;
+}
+button {
+background: #00c853;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+
+}
+button:hover { background: #00e676; }
+.card {
+background: rgba(255, 255, 255, 0.1);
+border-radius: 12px;
+padding: 20px;
+margin: 20px auto;
+width: 250px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+h1 { margin-bottom: 30px; }
+h2 { margin: 10px 0 5px; }
+</style>
+</head>
+<body>
+<h1>Cotações em Tempo Real</h1>
+<button id="atualizar">Atualizar Cotações</button>
+<div id="resultado">
+<div class="card">
+<h2>Dólar</h2>
+<p id="usd">--</p>
+</div>
+<div class="card">
+<h2>Euro</h2>
+<p id="eur">--</p>
+</div>
+<div class="card">
+<h2>Bitcoin</h2>
+<p id="btc">--</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
