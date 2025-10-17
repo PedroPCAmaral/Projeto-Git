@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Player iTunes</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff1493;
+      text-shadow: 0 0 10px #ff1493;
+    }
+
+    .input-container {
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ff1493;
+      width: 200px;
+      margin-right: 10px;
+      background: #1a1a1a;
+      color: #fff;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #ff1493;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #b30070;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #ff1493;
+      border-radius: 8px;
+      width: 220px;
+      padding: 15px;
+      box-shadow: 0 0 15px #ff1493;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #ff66cc;
+    }
+
+    .card p {
+      color: #ccc;
+      margin: 0;
+    }
+
+    .card a {
+      color: #00ffff;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    #erro {
+      color: #ff4444;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎧 Player iTunes 🎶</h1>
+
+  <div class="input-container">
+    <input type="text" id="artist" placeholder="Digite o artista">
+    <button id="btn">Buscar Músicas</button>
+  </div>
+
+  <div class="container" id="musicas"></div>
+  <p id="erro"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
